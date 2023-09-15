@@ -7,9 +7,10 @@ import dts from 'vite-plugin-dts'
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/components/index.ts'),
+      entry: path.resolve(__dirname, 'src/lib/index.ts'),
       name: 'pixel',
-      fileName: 'pixel'
+      formats: ['es', 'umd'],
+      fileName: (format) => `pixel.${format}.js`,
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
