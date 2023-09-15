@@ -9,7 +9,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'pixel',
-      fileName: (format) => `index.${format}.js`
+      fileName: 'pixel'
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
@@ -20,8 +20,6 @@ export default defineConfig({
         }
       }
     },
-    sourcemap: true,
-    emptyOutDir: true
   },
   plugins: [react(), dts()],
 })
