@@ -2,8 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import path from 'path'
 import dts from 'vite-plugin-dts'
+import typescript from '@rollup/plugin-typescript'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   build: {
     lib: {
@@ -21,5 +21,14 @@ export default defineConfig({
       }
     },
   },
-  plugins: [react(), dts()],
+  plugins: [react(), dts(),
+  typescript({
+    'target': 'es2022',
+    'rootDir': './src',
+    'declaration': true,
+    'declarationDir': './dist',
+    exclude: './node_modules/**',
+    allowSyntheticDefaultImports: true
+  })
+  ],
 })
