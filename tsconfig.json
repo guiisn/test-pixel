@@ -14,9 +14,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
-    "declaration": true,
-    "typeRoots": ["./dist/index.d.ts"],
-
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
