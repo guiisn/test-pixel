@@ -11,19 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v2 # Use setup-node v2 for compatibility with pnpm
+      - uses: actions/setup-node@v2
         with:
           node-version: 18
           registry-url: https://npm.pkg.github.com/
           scope: "@guiisn"
-      - run: npm install -g pnpm # Instala o pnpm globalmente
-      - run: pnpm install --loglevel=error # Usa pnpm em vez de npm
+      - run: npm install -g pnpm
+      - run: pnpm install --loglevel=error
 
       - name: Set git identity
         run: |
           git config user.email "glhrmsouzanunes@gmail.com"
           git config user.name "guiisn"
 
-      - run: pnpm publish # Usa pnpm em vez de npm
+      - run: pnpm build # Adicione o comando pnpm build aqui
+      - run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
