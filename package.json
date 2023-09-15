@@ -2,23 +2,23 @@
   "name": "@guiisn/pixel-test",
   "author": "guiisn",
   "private": false,
-  "version": "0.0.6",
-  "main": "dist/pixel.umd.js",
-  "module": "dist/pixel.es.js",
+  "version": "0.0.7",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/pixel.umd.cjs",
+  "module": "./dist/pixel.js",
   "exports": {
     ".": {
-      "import": "./dits/pixel.es.js",
-      "require": "./dist/pixel.umd.js"
+      "import": "./dist/pixel.js",
+      "require": "./dist/pixel.umd.cjs"
     }
   },
-  "files": [
-    "/dist"
-  ],
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/@guiisn"
   },
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
