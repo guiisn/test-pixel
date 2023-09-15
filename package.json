@@ -2,7 +2,7 @@
   "name": "@guiisn/pixel-test",
   "author": "guiisn",
   "private": false,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "type": "module",
   "files": [
     "dist"
@@ -11,6 +11,7 @@
   "module": "./dist/pixel.js",
   "exports": {
     ".": {
+      "types": "./dist/lib/index.d.ts",
       "import": "./dist/pixel.js",
       "require": "./dist/pixel.umd.cjs"
     }
