@@ -1,5 +1,5 @@
+// @ts-nocheck
 import { fireEvent, render } from '@testing-library/react';
-
 import PanelButton from '.';
 
 describe('PanelButton', () => {
