@@ -9,8 +9,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/lib/index.ts'),
       name: 'pixel',
-      formats: ['es', 'umd'],
-      fileName: (format) => `pixel.${format}.js`,
+      fileName: 'pixel'
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
