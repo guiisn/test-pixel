@@ -1,6 +1,5 @@
 import { ButtonProps, Button as MantineButton } from '@mantine/core';
 
-
 export interface CustomButtonProps extends ButtonProps {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }

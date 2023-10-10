@@ -1,6 +1,5 @@
 import { UnstyledButton, UnstyledButtonProps } from '@mantine/core';
 
-
 export interface HeaderReturnButtonProps extends UnstyledButtonProps {
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
     leftIcon?: React.ReactNode

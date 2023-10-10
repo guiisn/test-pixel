@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { render, fireEvent } from '@testing-library/react';
 import ActionButton, { ActionButtonProps } from '.';
 

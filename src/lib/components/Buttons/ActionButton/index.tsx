@@ -2,7 +2,6 @@ import {
   Group, Title, UnstyledButton, UnstyledButtonProps,
 } from '@mantine/core';
 
-
 export interface ActionButtonProps extends UnstyledButtonProps {
     variant: 'thin' | 'thick' | 'small'
     icon: React.ReactNode
