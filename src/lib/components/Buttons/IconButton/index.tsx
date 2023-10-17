@@ -2,8 +2,6 @@ import {
   Box, ActionIcon, ActionIconProps, Tooltip, Title,
 } from '@mantine/core';
 
-
-
 export interface IconButtonProps extends ActionIconProps {
     tooltipTitle: string
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -16,18 +14,18 @@ export default function IconButton(props: IconButtonProps): JSX.Element {
   } = props;
 
   return (
-    <Tooltip label={tooltipTitle} color="violet.4">
+    <Tooltip label={tooltipTitle} c="violet.4">
       <ActionIcon
         w="2.625rem"
         h="2.625rem"
-        color={color}
+        c={color}
         variant={variant}
         onClick={onClick}
-        sx={{ position: 'relative' }}
+        style={{ position: 'relative' }}
         {...rest}
       >
         {actionsCounter && (
-          <Box sx={(theme) => ({
+          <Box style={(theme) => ({
             width: '1.8rem',
             height: '1.8rem',
             backgroundColor: theme.colors.red[4],
@@ -40,7 +38,7 @@ export default function IconButton(props: IconButtonProps): JSX.Element {
             alignItems: 'center',
           })}
           >
-            <Title order={4} color="#fff">{actionsCounter}</Title>
+            <Title order={4} c="#fff">{actionsCounter}</Title>
           </Box>
         )}
         {children}

@@ -24,20 +24,20 @@ async function copyToClipboard(text: string): Promise<boolean> {
 function GetPalette(): JSX.Element {
   const palette = (title: string, colors: string[]): JSX.Element => (
     <Stack>
-      <Group position="apart">
-        <Title order={4} color={colors[4]}>{title}</Title>
-        <Button variant="subtle" color="violet.4" rightIcon={<Copy />} size="xs" onClick={() => copyToClipboard(colors?.toString())}>
+      <Group justify="space-between">
+        <Title order={4} c={colors[4]}>{title}</Title>
+        <Button variant="subtle" c="violet.4" rightIcon={<Copy />} size="xs" onClick={() => copyToClipboard(colors?.toString())}>
           Copy
         </Button>
       </Group>
       <Group spacing="xs">
         {colors?.map((color: any, index: number) => (
-          <Stack key={index} align="center" sx={{ border: `1px solid ${color}`, borderRadius: '5px' }}>
+          <Stack key={index} align="center" style={{ border: `1px solid ${color}`, borderRadius: '5px' }}>
             <div style={{
               height: '50px', width: '80px', backgroundColor: color, borderRadius: '2px 2px 0 0',
             }}
             />
-            <Title order={6} color="gray.9">{color}</Title>
+            <Title order={6} c="gray.9">{color}</Title>
           </Stack>
         ))}
       </Group>

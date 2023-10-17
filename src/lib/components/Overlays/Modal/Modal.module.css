@@ -1,0 +1,15 @@
+.root {
+    width: 39.37rem;
+    border-radius: 30px;
+    margin: 0;
+    padding: 1.75rem;
+    box-shadow: 0px 7px 21px 0px rgba(8, 73, 132, 0.18);
+}
+
+.header {
+    display: none;
+}
+
+.body {
+    padding: 0;
+}

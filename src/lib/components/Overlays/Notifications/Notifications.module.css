@@ -1,0 +1,96 @@
+.wrapper {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 0;
+}
+
+.notificationButton {
+    cursor: pointer;
+    background: var(--mantine-color-violet-4, transparent);
+    transition: 0.5s ease;
+    border-radius: 100px;
+    padding: 8px;
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    padding: 12px;
+    overflow: hidden;
+    width: 0.4rem;
+    height: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: var(--mantine-color-red-4);
+    border-radius: 100%;
+    font-size: 1em;
+    font-weight: 800;
+}
+
+.dropdown {
+    padding: 0;
+    width: 36.75rem;
+    height: 41.875rem;
+    max-height: 41.875rem;
+    overflow: hidden;
+    border: 0;
+    box-shadow: 0px 2px 26px 0px rgba(0, 0, 0, 0.11);
+}
+
+.header {
+    padding: 1.25rem;
+    gap: 1.25rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.heading {
+    color: var(--mantine-color-gray-9);
+    font-family: 'Nunito';
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.scroll {
+    height: 85%;
+    overflow: auto;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: var(--mantine-color-gray-0);
+    border-radius: 30px;
+}
+
+.buttonWrapper {
+    padding: 0.3rem 1rem 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notificationsWrapper {
+    overflow-y: auto;
+    max-height: 610px;
+}
+
+.anchor {
+    transition: all 0.4s;
+}
+
+.anchor:hover {
+    text-decoration: none;
+    color: var(--mantine-color-violet-6);
+    transform: scale(1.1);
+}

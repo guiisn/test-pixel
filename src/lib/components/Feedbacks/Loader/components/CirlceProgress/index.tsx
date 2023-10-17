@@ -1,9 +1,7 @@
 import { useEffect, useRef } from 'react';
-import useStyles from './style';
+import classes from './CircleProgress.module.css';
 
 export default function CircleProgress({ value }: {value: number}): JSX.Element {
-  const { classes } = useStyles();
-
   const circleRef = useRef<SVGCircleElement | null>(null);
 
   useEffect(() => {

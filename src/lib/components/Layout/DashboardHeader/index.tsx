@@ -27,7 +27,7 @@ export default function DashboardHeader({
 
   return (
     <>
-      <Group position="apart" align="flex-start">
+      <Group justify="space-between" align="flex-start">
         <TextInput
           onChange={onSearchBarChange}
           placeholder="Buscar"
@@ -39,13 +39,13 @@ export default function DashboardHeader({
           <Button
             display={!showFilterButton ? 'none' : 'flex'}
             variant="outline"
-            color="violet.4"
-            leftIcon={<Filter />}
+            c="violet.4"
+            leftSection={<Filter />}
             onClick={() => setOpened(true)}
           >
             Filtros
           </Button>
-          <Button leftIcon={<Plus />} color="violet.4">
+          <Button leftSection={<Plus />} c="violet.4">
             Nova
           </Button>
         </Group>
@@ -71,7 +71,7 @@ export default function DashboardHeader({
           },
         }}
       >
-        <Text color="violet.4" fz="1.275rem" fw={600}>
+        <Text c="violet.4" fz="1.275rem" fw={600}>
           Não há opções de filtros para esta busca.
         </Text>
       </Drawer>

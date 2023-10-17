@@ -1,0 +1,21 @@
+/* styles.module.css */
+
+.component {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.control {
+    border: 0;
+    background-color: transparent;
+    font-family: 'Nunito';
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--mantine-color-gray-4);
+}
+
+.control[data-active] {
+    background-color: var(--mantine-color-violet-4);
+    font-weight: 800;
+}

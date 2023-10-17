@@ -21,7 +21,7 @@ export const Success: StoryObj<typeof Modal> = {
       return (
         <>
           <Button
-            color="violet.4"
+            c="violet.4"
             onClick={() => setOpened(true)}
           >
             Open success modal
@@ -47,7 +47,7 @@ export const Error: StoryObj<typeof Modal> = {
       return (
         <>
           <Button
-            color="violet.4"
+            c="violet.4"
             onClick={() => setOpened(true)}
           >
             Open error modal
@@ -74,7 +74,7 @@ export const Confirm: StoryObj<typeof Modal> = {
       return (
         <>
           <Button
-            color="violet.4"
+            c="violet.4"
             onClick={() => setOpened(true)}
           >
             Open confirm modal
@@ -86,7 +86,7 @@ export const Confirm: StoryObj<typeof Modal> = {
             onConfirm={() => setOpened(false)}
             title="Modal title"
             subtitle="Modal subtitle"
-            icon={<ReportMoney color={colors.violet[4]} />}
+            icon={<ReportMoney c={colors.violet[4]} />}
           />
         </>
       );
@@ -102,7 +102,7 @@ export const Progress: StoryObj<typeof Modal> = {
       return (
         <>
           <Button
-            color="violet.4"
+            c="violet.4"
             onClick={() => setOpened(true)}
           >
             Open confirm modal
@@ -129,7 +129,7 @@ export const Custom: StoryObj<typeof Modal> = {
       return (
         <>
           <Button
-            color="violet.4"
+            c="violet.4"
             onClick={() => setOpened(true)}
           >
             Open confirm modal
@@ -139,14 +139,14 @@ export const Custom: StoryObj<typeof Modal> = {
             opened={opened}
             onClose={() => setOpened(false)}
           >
-            <Stack sx={{ gap: 0 }} align="center">
-              <Text fz="1.75rem" weight={700}>
+            <Stack style={{ gap: 0 }} align="center">
+              <Text fz="1.75rem" fw={700}>
                 Custom modal
               </Text>
-              <Text fz="1.125rem" weight={500}>
+              <Text fz="1.125rem" fw={500}>
                 This modal gives you the freedom to insert anything here
               </Text>
-              <Button onClick={() => setOpened(false)} variant="filled" color="violet.4">
+              <Button onClick={() => setOpened(false)} variant="filled" c="violet.4">
                 Ok
               </Button>
             </Stack>

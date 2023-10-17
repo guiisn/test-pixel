@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import useStyles from './styles';
+import classes from './PaperTable.module.css';
 
 type IHeader = {value: string, label: string}
 
@@ -11,15 +11,17 @@ export interface PaperTableProps {
 }
 
 export default function PaperTable({
-  header, body, tableTitle, tableTitleColor,
+  header, body, tableTitle, tableTitleColor = '#771aff',
 }: PaperTableProps): JSX.Element {
-  const { classes } = useStyles({ tableTitleColor });
+  const paperTableStyle = {
+    '--table-title-color': tableTitleColor,
+  };
 
   return (
     <table className={classes.table}>
       <thead>
         {tableTitle ? (
-          <tr className={classes.tableTitle}>
+          <tr className={classes.tableTitle} style={paperTableStyle as React.CSSProperties}>
             {tableTitle}
           </tr>
         ) : null}

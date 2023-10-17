@@ -1,0 +1,50 @@
+.checkmark {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    margin: auto;
+    animation-name: fill, scale;
+    animation-duration: 0.6s, 0.5s;
+    animation-timing-function: ease-in-out, ease-in-out;
+    animation-delay: 0.4s, 0.11s;
+    animation-fill-mode: forwards, both;
+}
+
+.checkmark-color {
+    animation-fill-mode: forwards;
+    animation-name: fill;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.4s;
+    background-color: var(--custom-color, #700DFF);
+    /* Use uma variável CSS personalizada */
+    box-shadow: inset 0px 0px 0px var(--custom-color, #700DFF);
+}
+
+.checkmark-scale {
+    animation-fill-mode: forwards;
+    animation-name: scale;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.11s;
+    transform-origin: 50% 50%;
+    transform: scale3d(1.1, 1.1, 1);
+}
+
+.check {
+    animation-fill-mode: forwards;
+    animation-name: stroke;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.65, 0, 0.45, 1);
+    animation-delay: 1s;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    transform-origin: 50% 50%;
+    stroke: var(--custom-color, #700DFF);
+    /* Use uma variável CSS personalizada */
+}

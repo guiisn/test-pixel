@@ -3,7 +3,7 @@ import CircleCheck, { CircleCheckProps } from '.';
 
 function Component({ color, mode }: CircleCheckProps): JSX.Element {
   return (
-    <CircleCheck color={color} mode={mode} />
+    <CircleCheck c={color} mode={mode} />
   );
 }
 

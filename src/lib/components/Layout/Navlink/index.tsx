@@ -1,17 +1,15 @@
 import { NavLink as MantineNavLink, NavLinkProps as MantineNavLinkProps } from '@mantine/core';
 import React from 'react';
-import useStyles from './style';
+import classes from './Navlink.module.css';
 
 export interface NavLinkProps extends MantineNavLinkProps {
     variant?: 'dead' | 'son' | 'footer'
-    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    icon?: React.ReactNode
 }
 
 export default function NavLink({
   variant = 'dead', label, icon, childrenOffset, active, onClick, children, ...rest
 }: NavLinkProps): JSX.Element {
-  const { classes } = useStyles();
-
   const style = {
     label: {
       dead: classes.navlinkDeadLabel,
@@ -28,7 +26,7 @@ export default function NavLink({
   return (
     <MantineNavLink
       label={label}
-      icon={icon}
+      leftSection={icon}
       childrenOffset={childrenOffset}
       active={active}
       onClick={onClick}

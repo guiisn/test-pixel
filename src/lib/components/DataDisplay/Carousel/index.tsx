@@ -1,15 +1,13 @@
 import { Carousel as MantineCarousel } from '@mantine/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import { useRef } from 'react';
-import useStyles from './styles';
+import classes from './Carousel.module.css';
 
 export interface ICarousel {
   data?: Array<string>
 }
 
 export default function Carousel({ data }: ICarousel): JSX.Element {
-  const { classes } = useStyles();
-
   const autoplay = useRef(Autoplay({ delay: 5000 }));
 
   return (

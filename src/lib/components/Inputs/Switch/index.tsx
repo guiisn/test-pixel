@@ -1,5 +1,5 @@
 import { Switch as MantineSwitch, SwitchProps } from '@mantine/core';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Switch(props: SwitchProps): JSX.Element {
   const [defaultChecked, setDefaultChecked] = useState(false);
@@ -11,7 +11,7 @@ export default function Switch(props: SwitchProps): JSX.Element {
 
   return (
     <MantineSwitch
-      color="gray.0"
+      c="gray.0"
       styles={{
         root: {
           border: 'none',

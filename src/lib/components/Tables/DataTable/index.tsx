@@ -4,7 +4,7 @@ import {
 } from '@mantine/core';
 import NoResults from '../../Feedbacks/NoResults';
 import TablePagination from '../../Navigation/Pagination';
-import useStyles from './style';
+import classes from './DataTable.module.css';
 
 export interface DataTableProps {
   columns: Array<string>;
@@ -24,8 +24,6 @@ export default function DataTable({
   isLoading,
   paginationProps,
 }: DataTableProps): JSX.Element {
-  const { classes } = useStyles();
-
   const keys = rows?.length ? Object.keys(rows[0]) : null;
 
   const noResults = (!rows || !rows?.length) && !isLoading;
@@ -60,7 +58,7 @@ export default function DataTable({
         )}
         {isLoading && (
           <Stack h="calc(100% - 3.75rem)" justify="center" align="center" data-testid="loader-container">
-            <Loader color="violet.4" />
+            <Loader c="violet.4" />
           </Stack>
         )}
       </Box>

@@ -1,0 +1,74 @@
+/* styles.module.css */
+
+.navlinkDeadLabel {
+    font-family: 'Nunito';
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.navlinkDeadRoot {
+    color: var(--mantine-color-gray-3);
+    border-radius: 8px;
+}
+
+.navlinkDeadRoot[data-active] {
+    color: var(--mantine-color-violet-4);
+    background-color: var(--mantine-color-violet-0);
+}
+
+.navlinkDeadRoot[data-active]:hover {
+    background-color: var(--mantine-color-violet-1);
+}
+
+.navlinkDeadRoot:hover {
+    background-color: var(--mantine-color-violet-1);
+}
+
+.navlinkSonRoot {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--mantine-color-gray-3);
+    border-left: 2px solid var(--mantine-color-violet-4);
+}
+
+.navlinkSonRoot[data-active] {
+    background-color: transparent;
+    color: var(--mantine-color-violet-4);
+}
+
+.navlinkSonRoot[data-active]:hover {
+    background-color: transparent;
+}
+
+.navlinkSonRoot:hover {
+    background-color: transparent;
+    color: var(--mantine-color-violet-6);
+}
+
+.navlinkSonLabel {
+    font-family: 'Nunito';
+}
+
+.navlinkFooterLabel {
+    font-family: 'Nunito';
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.navlinkFooterRoot {
+    color: var(--mantine-color-gray-4);
+    border-radius: 8px;
+}
+
+.navlinkFooterRoot[data-active] {
+    color: var(--mantine-color-gray-4);
+    background-color: transparent;
+}
+
+.navlinkFooterRoot[data-active]:hover {
+    background-color: var(--mantine-color-gray-0);
+}
+
+.navlinkFooterRoot:hover {
+    background-color: var(--mantine-color-gray-0);
+}

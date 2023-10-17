@@ -2,11 +2,10 @@ import {
   Box,
   Pagination, PaginationProps,
 } from '@mantine/core';
-import useStyles from './style';
+import classes from './Pagination.module.css';
 
 export default function TablePagination(props: PaginationProps): JSX.Element {
   const { onChange, total } = props;
-  const { classes } = useStyles();
   return (
     <Box className={classes.component} data-testid="paginationContainer">
       <Pagination
@@ -14,7 +13,7 @@ export default function TablePagination(props: PaginationProps): JSX.Element {
         onChange={onChange}
         total={total}
         radius="xl"
-        color="violet.4"
+        c="violet.4"
         classNames={{
           control: classes.control,
         }}

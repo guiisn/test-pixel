@@ -14,7 +14,7 @@ export default function FeedbackModal({
 }: FeedbackModalProps): JSX.Element {
   return (
     <Stack
-      sx={{
+      style={{
         gap: '2.08rem',
       }}
       align="center"
@@ -23,15 +23,15 @@ export default function FeedbackModal({
       <Box>
         <CircleCheck mode={type} />
       </Box>
-      <Stack sx={{ gap: 0 }} align="center">
-        <Text fz="1.75rem" weight={700}>
+      <Stack style={{ gap: 0 }} align="center">
+        <Text fz="1.75rem" fw={700}>
           {title ?? '-'}
         </Text>
-        <Text fz="1.125rem" weight={500}>
+        <Text fz="1.125rem" fw={500}>
           {subtitle ?? '-'}
         </Text>
       </Stack>
-      <Button variant="filled" color="violet.4" w="18.75rem" onClick={onClose}>
+      <Button variant="filled" c="violet.4" w="18.75rem" onClick={onClose}>
         Ok
       </Button>
     </Stack>

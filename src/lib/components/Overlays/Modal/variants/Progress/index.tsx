@@ -11,11 +11,11 @@ export default function ProgressModal({ title, subtitle, percentage }: ProgressM
   return (
     <Stack align="center">
       <Loader variant="percentage" value={percentage} />
-      <Stack sx={{ gap: 0 }} align="center">
-        <Text fz="1.75rem" weight={700}>
+      <Stack style={{ gap: 0 }} align="center">
+        <Text fz="1.75rem" fw={700}>
           {title ?? '-'}
         </Text>
-        <Text fz="1.125rem" weight={500}>
+        <Text fz="1.125rem" fw={500}>
           {subtitle ?? '-'}
         </Text>
       </Stack>

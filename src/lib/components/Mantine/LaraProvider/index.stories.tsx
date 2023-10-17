@@ -23,7 +23,7 @@ export default {
   decorators: [
     () => (
       <Box>
-        <Title order={5} weight={500} color="gray">
+        <Title order={5} fw={500} c="gray">
           The LaraProvider component must be inserted in the
           {' '}
           <Code>App.tsx</Code>
@@ -31,9 +31,9 @@ export default {
           file to use the custom theme.
         </Title>
         <Space h="lg" />
-        <Title order={2} weight={800} color="grey.9">Use:</Title>
+        <Title order={2} fw={800} c="grey.9">Use:</Title>
         <Space h="lg" />
-        <Code block color="gray">{code}</Code>
+        <Code block c="gray">{code}</Code>
       </Box>
     ),
   ],

@@ -3,6 +3,7 @@ import { UnstyledButton, UnstyledButtonProps } from '@mantine/core';
 export interface HeaderReturnButtonProps extends UnstyledButtonProps {
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
     leftIcon?: React.ReactNode
+    children?: React.ReactNode | string
 }
 
 export default function HeaderReturnButton(props: HeaderReturnButtonProps): JSX.Element {
@@ -13,7 +14,7 @@ export default function HeaderReturnButton(props: HeaderReturnButtonProps): JSX.
   return (
     <UnstyledButton
       onClick={onClick}
-      sx={(theme) => ({
+      style={(theme) => ({
         display: 'flex',
         alignItems: 'center',
         gap: '.625rem',

@@ -1,0 +1,40 @@
+.anchor {
+    height: 9.735rem;
+}
+
+.anchor:hover {
+    text-decoration: none;
+}
+
+.content {
+    padding: 1rem;
+    border-top: 1px solid var(--mantine-color-violet-4);
+    /* Você pode definir as variáveis de cores no seu arquivo CSS Modules ou em algum lugar conveniente. */
+}
+
+.content:hover {
+    background-color: var(--mantine-color-violet-0);
+}
+
+.badge {
+    font-size: 0.7em;
+    background-color: var(--mantine-color-gray-1);
+    color: var(--mantine-color-gray-8);
+    font-weight: 700;
+}
+
+.icon {
+    border-radius: 50%;
+}
+
+.icon svg {
+    width: 3.6875rem;
+    height: 3.6875rem;
+    color: var(--mantine-color-violet-4);
+}
+
+.title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

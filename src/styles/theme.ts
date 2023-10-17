@@ -1,10 +1,14 @@
-import { MantineThemeOverride } from '@mantine/core';
+import { createTheme } from '@mantine/core';
 import {
-  laraAquamarine, laraBlue, laraGreen, laraGray, laraOrange, laraPink,
-  laraRed, laraSuccess, laraYellow, laraPurple,
+  laraAquamarine, laraBlue,
+  laraGray,
+  laraGreen,
+  laraOrange, laraPink,
+  laraPurple,
+  laraRed, laraSuccess, laraYellow,
 } from './colors';
 
-const GlobalTheme: MantineThemeOverride = {
+const GlobalTheme = createTheme({
   colors: {
     violet: laraPurple,
     gray: laraGray,
@@ -17,8 +21,7 @@ const GlobalTheme: MantineThemeOverride = {
     teal: laraSuccess,
     yellow: laraYellow,
   },
-  primaryColor: 'violet',
-  colorScheme: 'light',
+  // primaryColor: 'violet.4',
   components: {
     ActionIcon: {
       defaultProps: {
@@ -27,7 +30,7 @@ const GlobalTheme: MantineThemeOverride = {
     },
     Button: {
       defaultProps: {
-        color: 'violet.0',
+        color: 'violet.4',
       },
       styles: {
         root: {
@@ -47,48 +50,51 @@ const GlobalTheme: MantineThemeOverride = {
         radius: '8px',
         variant: 'default',
       },
-      styles: (theme) => ({
+      styles: {
         label: {
           fontSize: '1rem',
           fontWeight: 700,
-          color: theme.colors.violet[4],
+          color: laraPurple[4],
           span: {
-            color: theme.colors.violet[4],
+            color: laraPurple[4],
           },
         },
         input: {
           height: '2.81rem',
-          border: `1px solid ${theme.colors.gray[2]}`,
+          border: `1px solid ${laraGray[2]}`,
           ':focus': {
-            border: `1px solid ${theme.colors.violet[4]}`,
+            border: `1px solid ${laraPurple[4]}`,
           },
           '&[data-invalid]': {
-            border: `1px solid ${theme.colors.red[4]}`,
+            border: `1px solid ${laraRed[4]}`,
           },
         },
         error: {
           fontSize: '.9rem',
           fontWeight: 600,
-          color: theme.colors.red[4],
+          color: laraRed[4],
         },
-      }),
+      },
     },
     Anchor: {
-      styles: (theme) => ({
+      styles: {
         root: {
           fontWeight: 700,
           fontSize: '1rem',
           lineHeight: '1.125em',
-          color: theme.colors.violet[4],
+          color: laraPurple[4],
           textDecoration: 'none',
           '&:hover': {
-            color: theme.colors.violet[6],
+            color: laraPurple[6],
           },
         },
-      }),
+      },
     },
     Checkbox: {
-      styles: (theme) => ({
+      defaultProps: {
+        c: 'violet.4',
+      },
+      styles: {
         label: {
           fontFamily: 'Nunito',
           fontWeight: 600,
@@ -99,39 +105,39 @@ const GlobalTheme: MantineThemeOverride = {
         input: {
           backgroundColor: 'white',
           ':checked': {
-            backgroundColor: theme.colors.violet[4],
+            backgroundColor: laraPurple[4],
           },
         },
-      }),
+      },
     },
     Select: {
       defaultProps: {
         radius: '8px',
         variant: 'default',
       },
-      styles: (theme) => ({
+      styles: {
         label: {
           fontSize: '1rem',
           fontWeight: 700,
-          color: theme.colors.violet[4],
+          color: laraPurple[4],
           span: {
-            color: theme.colors.violet[4],
+            color: laraPurple[4],
           },
         },
         input: {
           height: '2.81rem',
-          border: `1px solid ${theme.colors.gray[2]}`,
+          border: `1px solid ${laraGray[2]}`,
           ':focus': {
-            border: `1px solid ${theme.colors.violet[4]}`,
+            border: `1px solid ${laraPurple[4]}`,
           },
           '&[data-invalid]': {
-            border: `1px solid ${theme.colors.red[4]}`,
+            border: `1px solid ${laraRed[4]}`,
           },
         },
         error: {
           fontSize: '.9rem',
           fontWeight: 600,
-          color: theme.colors.red[4],
+          color: laraRed[4],
         },
         dropdown: {
           border: 0,
@@ -140,70 +146,70 @@ const GlobalTheme: MantineThemeOverride = {
           fontFamily: 'Nunito',
           fontWeight: 700,
           ':hover': {
-            backgroundColor: theme.colors.violet[0],
+            backgroundColor: laraPurple[0],
           },
         },
-      }),
+      },
     },
     ColorInput: {
       defaultProps: {
         radius: '8px',
         variant: 'default',
       },
-      styles: (theme) => ({
+      styles: {
         label: {
           fontSize: '1rem',
           fontWeight: 700,
-          color: theme.colors.violet[4],
+          color: laraPurple[4],
           span: {
-            color: theme.colors.violet[4],
+            color: laraPurple[4],
           },
         },
         input: {
           height: '2.81rem',
-          border: `1px solid ${theme.colors.gray[2]}`,
+          border: `1px solid ${laraGray[2]}`,
           ':focus': {
-            border: `1px solid ${theme.colors.violet[4]}`,
+            border: `1px solid ${laraPurple[4]}`,
           },
           '&[data-invalid]': {
-            border: `1px solid ${theme.colors.red[4]}`,
+            border: `1px solid ${laraRed[4]}`,
           },
         },
         error: {
           fontSize: '.9rem',
           fontWeight: 600,
-          color: theme.colors.red[4],
+          color: laraRed[4],
         },
-      }),
+      },
     },
     DateInput: {
       defaultProps: {
         radius: '8px',
         variant: 'default',
       },
-      styles: (theme) => ({
+      styles: {
         label: {
           fontSize: '1rem',
           fontWeight: 700,
-          color: theme.colors.violet[4],
+          color: laraPurple[4],
           span: {
-            color: theme.colors.violet[4],
+            color: laraPurple[4],
           },
         },
         input: {
           height: '2.81rem',
-          border: `1px solid ${theme.colors.gray[2]}`,
+          border: `1px solid ${laraGray[2]}`,
           ':focus': {
-            border: `1px solid ${theme.colors.violet[4]}`,
+            border: `1px solid ${laraPurple[4]}`,
           },
           '&[data-invalid]': {
-            border: `1px solid ${theme.colors.red[4]}`,
+            border: `1px solid ${laraRed[4]}`,
           },
         },
         error: {
           fontSize: '.9rem',
           fontWeight: 600,
-          color: theme.colors.red[4],
+          color: laraRed[4],
         },
         root: {
           '.mantine-Popover-dropdown': {
@@ -212,85 +218,85 @@ const GlobalTheme: MantineThemeOverride = {
           },
         },
         calendarHeaderControl: {
-          color: theme.colors.violet[4],
+          color: laraPurple[4],
           borderRadius: '50%',
           ':hover': {
-            backgroundColor: theme.colors.violet[5],
-            color: theme.colors.violet[0],
+            backgroundColor: laraPurple[5],
+            color: laraPurple[0],
           },
         },
         calendarHeaderLevel: {
-          color: theme.colors.violet[4],
+          color: laraPurple[4],
           borderRadius: '30px',
           ':hover': {
-            backgroundColor: theme.colors.violet[5],
-            color: theme.colors.violet[0],
+            backgroundColor: laraPurple[5],
+            color: laraPurple[0],
           },
         },
         day: {
           borderRadius: '4px',
           '&[data-selected]': {
-            backgroundColor: theme.colors.violet[4],
+            backgroundColor: laraPurple[4],
             ':hover': {
-              backgroundColor: theme.colors.violet[4],
+              backgroundColor: laraPurple[4],
             },
           },
           ':hover': {
-            backgroundColor: theme.colors.violet[5],
-            color: theme.colors.violet[0],
+            backgroundColor: laraPurple[5],
+            color: laraPurple[0],
           },
         },
         monthPickerControl: {
           ':hover': {
-            backgroundColor: theme.colors.violet[5],
+            backgroundColor: laraPurple[5],
           },
         },
         monthPickerControlActive: {
-          backgroundColor: theme.colors.violet[4],
+          backgroundColor: laraPurple[4],
           ':hover': {
-            backgroundColor: theme.colors.violet[4],
+            backgroundColor: laraPurple[4],
           },
         },
         yearPickerControl: {
           ':hover': {
-            backgroundColor: theme.colors.violet[5],
+            backgroundColor: laraPurple[5],
           },
         },
         yearPickerControlActive: {
-          backgroundColor: theme.colors.violet[4],
+          backgroundColor: laraPurple[4],
           ':hover': {
-            backgroundColor: theme.colors.violet[4],
+            backgroundColor: laraPurple[4],
           },
         },
-      }),
+      },
     },
     DatePicker: {
       defaultProps: {
         radius: '8px',
         variant: 'default',
       },
-      styles: (theme) => ({
+      styles: {
         label: {
           fontSize: '1rem',
           fontWeight: 700,
-          color: theme.colors.violet[4],
+          color: laraPurple[4],
           span: {
-            color: theme.colors.violet[4],
+            color: laraPurple[4],
           },
         },
         input: {
-          border: `1px solid ${theme.colors.gray[2]}`,
+          border: `1px solid ${laraGray[2]}`,
           ':focus': {
-            border: `1px solid ${theme.colors.violet[4]}`,
+            border: `1px solid ${laraPurple[4]}`,
           },
           '&[data-invalid]': {
-            border: `1px solid ${theme.colors.red[4]}`,
+            border: `1px solid ${laraRed[4]}`,
           },
         },
         error: {
           fontSize: '.9rem',
           fontWeight: 600,
-          color: theme.colors.red[4],
+          color: laraRed[4],
         },
         root: {
           '.mantine-Popover-dropdown': {
@@ -299,119 +305,119 @@ const GlobalTheme: MantineThemeOverride = {
           },
         },
         calendarHeaderControl: {
-          color: theme.colors.violet[4],
+          color: laraPurple[4],
           borderRadius: '50%',
           ':hover': {
-            backgroundColor: theme.colors.violet[5],
-            color: theme.colors.violet[0],
+            backgroundColor: laraPurple[5],
+            color: laraPurple[0],
           },
         },
         calendarHeaderLevel: {
-          color: theme.colors.violet[4],
+          color: laraPurple[4],
           borderRadius: '30px',
           ':hover': {
-            backgroundColor: theme.colors.violet[5],
-            color: theme.colors.violet[0],
+            backgroundColor: laraPurple[5],
+            color: laraPurple[0],
           },
         },
         day: {
           borderRadius: '4px',
           '&[data-selected]': {
-            backgroundColor: theme.colors.violet[4],
+            backgroundColor: laraPurple[4],
             ':hover': {
-              backgroundColor: theme.colors.violet[4],
+              backgroundColor: laraPurple[4],
             },
           },
           ':hover': {
-            backgroundColor: theme.colors.violet[5],
-            color: theme.colors.violet[0],
+            backgroundColor: laraPurple[5],
+            color: laraPurple[0],
           },
         },
         monthPickerControl: {
           ':hover': {
-            backgroundColor: theme.colors.violet[5],
+            backgroundColor: laraPurple[5],
           },
         },
         monthPickerControlActive: {
-          backgroundColor: theme.colors.violet[4],
+          backgroundColor: laraPurple[4],
           ':hover': {
-            backgroundColor: theme.colors.violet[4],
+            backgroundColor: laraPurple[4],
           },
         },
         yearPickerControl: {
           ':hover': {
-            backgroundColor: theme.colors.violet[5],
+            backgroundColor: laraPurple[5],
           },
         },
         yearPickerControlActive: {
-          backgroundColor: theme.colors.violet[4],
+          backgroundColor: laraPurple[4],
           ':hover': {
-            backgroundColor: theme.colors.violet[4],
+            backgroundColor: laraPurple[4],
           },
         },
-      }),
+      },
     },
     Textarea: {
       defaultProps: {
         radius: '8px',
         variant: 'default',
       },
-      styles: (theme) => ({
+      styles: {
         label: {
           fontSize: '1rem',
           fontWeight: 700,
-          color: theme.colors.violet[4],
+          color: laraPurple[4],
           span: {
-            color: theme.colors.violet[4],
+            color: laraPurple[4],
           },
         },
         input: {
           minHeight: '7rem',
-          border: `1px solid ${theme.colors.gray[2]}`,
+          border: `1px solid ${laraGray[2]}`,
           ':focus': {
-            border: `1px solid ${theme.colors.violet[4]}`,
+            border: `1px solid ${laraPurple[4]}`,
           },
           '&[data-invalid]': {
-            border: `1px solid ${theme.colors.red[4]}`,
+            border: `1px solid ${laraRed[4]}`,
           },
         },
         error: {
           fontSize: '.9rem',
           fontWeight: 600,
-          color: theme.colors.red[4],
+          color: laraRed[4],
         },
-      }),
+      },
     },
     PasswordInput: {
       defaultProps: {
         radius: '8px',
         variant: 'default',
       },
-      styles: (theme) => ({
+      styles: {
         label: {
           fontSize: '1rem',
           fontWeight: 700,
-          color: theme.colors.violet[4],
+          color: laraPurple[4],
           span: {
-            color: theme.colors.violet[4],
+            color: laraPurple[4],
           },
         },
         input: {
           height: '2.81rem',
-          border: `1px solid ${theme.colors.gray[2]}`,
+          border: `1px solid ${laraGray[2]}`,
           ':focus': {
-            border: `1px solid ${theme.colors.violet[4]}`,
+            border: `1px solid ${laraPurple[4]}`,
           },
           '&[data-invalid]': {
-            border: `1px solid ${theme.colors.red[4]}`,
+            border: `1px solid ${laraRed[4]}`,
           },
         },
         error: {
           fontSize: '.9rem',
           fontWeight: 600,
-          color: theme.colors.red[4],
+          color: laraRed[4],
         },
-      }),
+      },
     },
     Title: {
       defaultProps: {
@@ -432,9 +438,8 @@ const GlobalTheme: MantineThemeOverride = {
       },
     },
   },
-  loader: 'dots',
   fontFamily: 'Nunito',
   headings: { fontFamily: 'Nunito' },
-};
+});
 
 export default GlobalTheme;

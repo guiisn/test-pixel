@@ -11,7 +11,7 @@ export default {
   tags: ['autodocs'],
   decorators: [
     (Story) => (
-      <Box h="45rem" sx={{ position: 'relative' }}>
+      <Box h="45rem" style={{ position: 'relative' }}>
         {Story()}
       </Box>
     ),

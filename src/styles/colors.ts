@@ -1,4 +1,4 @@
-import { Tuple } from '@mantine/core';
+import { MantineColorsTuple } from '@mantine/core';
 
 export const laraPurple = [
   '#f2e3ff',
@@ -11,7 +11,7 @@ export const laraPurple = [
   '#340082',
   '#1f0050',
   '#0b0020',
-] as Tuple<string, 10>;
+] as MantineColorsTuple;
 export const laraGray = [
   '#E4E4E4',
   '#D9D9D9',
@@ -23,7 +23,7 @@ export const laraGray = [
   '#404040',
   '#262626',
   '#120B0D',
-] as Tuple<string, 10>;
+] as MantineColorsTuple;
 export const laraAquamarine = [
   '#DFFCF8',
   '#BEEEE8',
@@ -35,7 +35,7 @@ export const laraAquamarine = [
   '#186158',
   '#063B35',
   '#001614',
-] as Tuple<string, 10>;
+] as MantineColorsTuple;
 export const laraGreen = [
   '#DCFFEC',
   '#AFFFD1',
@@ -47,7 +47,7 @@ export const laraGreen = [
   '#008035',
   '#004D1F',
   '#001C06',
-] as Tuple<string, 10>;
+] as MantineColorsTuple;
 export const laraOrange = [
   '#FFE9DF',
   '#FFC4AF',
@@ -59,7 +59,7 @@ export const laraOrange = [
   '#801E00',
   '#4E1000',
   '#200200',
-] as Tuple<string, 10>;
+] as MantineColorsTuple;
 export const laraRed = [
   '#FFE4E4',
   '#FEB7B8',
@@ -71,7 +71,7 @@ export const laraRed = [
   '#76070A',
   '#490204',
   '#1F0000',
-] as Tuple<string, 10>;
+] as MantineColorsTuple;
 export const laraPink = [
   '#FFE6F5',
   '#F5BEDA',
@@ -83,7 +83,7 @@ export const laraPink = [
   '#6B1441',
   '#420A28',
   '#1C010F',
-] as Tuple<string, 10>;
+] as MantineColorsTuple;
 export const laraYellow = [
   '#FFF6DA',
   '#FFE5AD',
@@ -95,7 +95,7 @@ export const laraYellow = [
   '#815400',
   '#4E3300',
   '#1E1000',
-] as Tuple<string, 10>;
+] as MantineColorsTuple;
 export const laraBlue = [
   '#E4EFFF',
   '#B9CFFA',
@@ -107,7 +107,7 @@ export const laraBlue = [
   '#0B2F71',
   '#031C47',
   '#00091D',
-] as Tuple<string, 10>;
+] as MantineColorsTuple;
 export const laraSuccess = [
   '#DDFFF2',
   '#B3FBDD',
@@ -119,4 +119,4 @@ export const laraSuccess = [
   '#037648',
   '#00482B',
   '#001A0C',
-] as Tuple<string, 10>;
+] as MantineColorsTuple;

@@ -1,0 +1,62 @@
+.table {
+    border: none;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Nunito';
+    padding: 0;
+    text-align: left;
+}
+
+.table thead tr th {
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: var(--mantine-color-gray-4);
+    padding: 0;
+}
+
+@media (max-width: var(--lg)) {
+    .table thead tr th {
+        font-size: 0.7rem;
+    }
+}
+
+.table tbody tr td {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--mantine-color-gray-9);
+    padding: 0;
+}
+
+@media (max-width: var(--lg)) {
+    .table tbody tr td {
+        font-size: 1rem;
+    }
+}
+
+.tableTitle {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--table-title-color);
+}
+
+.tableContainer {
+    padding: 0 10rem;
+}
+
+@media (max-width: var(--xl)) {
+    .tableContainer {
+        padding: 0 5rem;
+    }
+}
+
+@media (max-width: var(--lg)) {
+    .tableContainer {
+        padding: 0 2.5rem;
+    }
+}
+
+@media (max-width: var(--md)) {
+    .tableContainer {
+        padding: 0 1.25rem;
+    }
+}

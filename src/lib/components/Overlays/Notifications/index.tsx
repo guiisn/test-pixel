@@ -8,10 +8,10 @@ import { useState } from 'react';
 import { Bell, Dots } from 'tabler-icons-react';
 import { Button, NoResults } from '../../..';
 import './index.css';
-import useStyles from './style';
 import { NotificationType, PendingFilterType, RecentFilterType } from './types/filter';
 import Loader from '../../Feedbacks/Loader';
 import NotificationButton from '../../Buttons/Notifications';
+import classes from './Notifications.module.css';
 
 export interface NotificationsMenuProps {
     isLoading?: boolean
@@ -35,7 +35,6 @@ export default function NotificationsMenu({
   onDetailsClick,
 }: NotificationsMenuProps): JSX.Element {
   const [open, setOpen] = useState<number>(0);
-  const { classes } = useStyles({ open });
   const [selectedOption, setOption] = useState<OptionTypes>('recent');
   const { colors } = useMantineTheme();
 
@@ -65,7 +64,7 @@ export default function NotificationsMenu({
     >
       <Menu.Target>
         <Group m={0}>
-          <Center inline className={classes.notificationButton}>
+          <Center inline className={`${classes.notificationButton} ${open ? classes.violetBackground : ''}`}>
             <Bell color={open ? 'white' : colors.violet[4]} size={30} />
 
             {unreadNotificationsCount > 0 && (
@@ -78,9 +77,9 @@ export default function NotificationsMenu({
       </Menu.Target>
 
       <Menu.Dropdown className={classes.dropdown}>
-        <Stack h="41.875rem" sx={{ gap: 0 }}>
+        <Stack h="41.875rem" style={{ gap: 0 }}>
           <Stack className={classes.header} id="header">
-            <Group position="apart">
+            <Group justify="space-between">
               <Text className={classes.heading}>Titulo</Text>
               <Tooltip label="Detalhes">
                 <Anchor role="button" onClick={onDetailsClick}>
@@ -105,9 +104,8 @@ export default function NotificationsMenu({
                 return (
                   <Button
                     variant={selectedOption === key ? 'filled' : 'light'}
-                    color="violet.4"
+                    c="violet.4"
                     key={index}
-                    type="button"
                     {...props}
                   >
                     {item.label}
@@ -119,7 +117,7 @@ export default function NotificationsMenu({
 
           <Box className={classes.scroll} id="teste">
             {(isLoading && !notifications?.length) ? (
-              <Group h="100%" align="center" position="center">
+              <Group h="100%" align="center" justify="center">
                 <Loader variant="dots" />
               </Group>
             ) : notifications?.map((notification, index) => (
@@ -139,7 +137,7 @@ export default function NotificationsMenu({
             )}
           </Box>
           <Box
-            sx={{
+            style={{
               borderTop: '1px solid blue',
               height: '15%',
               display: 'flex',
@@ -149,8 +147,8 @@ export default function NotificationsMenu({
           >
             <Anchor
               fz="1.3125rem"
-              weight={700}
-              color="violet.4"
+              fw={700}
+              c="violet.4"
               className={classes.anchor}
               onClick={onDetailsClick}
               role="button"

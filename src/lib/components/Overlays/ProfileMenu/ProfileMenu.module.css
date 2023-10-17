@@ -1,0 +1,35 @@
+.dropdown {
+    border: 0;
+    box-shadow: 0px 17.395349502563477px 48.09302520751953px 5.116279125213623px rgba(161, 136, 198, 0.20);
+    border-radius: 20px;
+    padding: 0;
+}
+
+.avatar {
+    background-color: #FFC9B3;
+    border-radius: 50%;
+}
+
+.avatar .mantine-Avatar-placeholder {
+    font-size: 1.6875rem;
+    color: white;
+    background-color: #771aff;
+}
+
+.dropdownContent {
+    border-radius: 40.93px 0px 0px 40.93px;
+    padding: 1.72rem 1.81rem;
+}
+
+.largeAvatar {
+    background-color: #FFC9B3;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+
+.largeAvatar .mantine-Avatar-placeholder {
+    font-size: 4rem;
+    color: white;
+    background-color: #771aff;
+}

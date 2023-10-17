@@ -4,8 +4,8 @@ export default function Slider(): JSX.Element {
   return (
     <MantineSlider
       w="50%"
-      color="blue"
-    //   sx={{ backgroundColor: 'red' }}
+      c="blue"
+    //   style={{ backgroundColor: 'red' }}
       marks={[
         { value: 20, label: '20%' },
         { value: 50, label: '50%' },

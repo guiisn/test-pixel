@@ -4,7 +4,7 @@ import {
 } from '@mantine/core';
 
 import { MapPin } from 'tabler-icons-react';
-import useStyles from './styles';
+import classes from './CurrentCompany.module.css';
 
 export interface CurrentCompanyCardProps {
     activeCompany?: string
@@ -12,7 +12,6 @@ export interface CurrentCompanyCardProps {
 }
 
 export default function CurrentCompanyCard({ activeCompany, onCardClick }: CurrentCompanyCardProps): JSX.Element {
-  const { classes } = useStyles();
   const mantineTheme = useMantineTheme();
 
   return (
@@ -20,11 +19,11 @@ export default function CurrentCompanyCard({ activeCompany, onCardClick }: Curre
       onClick={onCardClick}
     >
       <Group
-        position="left"
+        justify="flex-start"
         className={classes.group}
       >
         <MapPin style={{ height: '100%' }} color={mantineTheme.colors.violet[4]} />
-        <Text sx={{ height: '100%', width: '80%' }} weight={700} fz=".875rem" color="violet.8">
+        <Text style={{ height: '100%', width: '80%' }} fw={700} fz=".875rem" c="violet.8">
           {activeCompany ?? '-'}
         </Text>
       </Group>

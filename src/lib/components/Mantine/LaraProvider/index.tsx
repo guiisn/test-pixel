@@ -1,14 +1,14 @@
 import { BoxProps, MantineProvider } from '@mantine/core';
 import GlobalTheme from '../../../../styles/theme';
-import CustomFonts from '../CustomFonts';
+import '@mantine/core/styles.css';
+import './normalize.css';
 
 export default function LaraProvider(props: BoxProps): JSX.Element {
-  const { children } = props;
-
   return (
-    <MantineProvider theme={GlobalTheme} withGlobalStyles withNormalizeCSS>
-      <CustomFonts />
-      {children}
-    </MantineProvider>
+    <MantineProvider
+      theme={GlobalTheme}
+      withCssVariables
+      {...props}
+    />
   );
 }

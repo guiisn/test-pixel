@@ -1,0 +1,8 @@
+.group {
+    border: 2px solid var(--mantine-color-violet-4);
+    padding: .4825rem;
+    border-radius: 46.322px;
+    gap: .4825rem;
+    width: 15.81rem;
+    max-width: 15.81rem;
+}

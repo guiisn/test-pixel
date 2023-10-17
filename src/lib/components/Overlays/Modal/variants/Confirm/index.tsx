@@ -22,7 +22,7 @@ export default function ConfirmModal({
           m={0}
           p={0}
           span={2}
-          sx={{
+          style={{
             svg: {
               width: '6rem',
               height: '6rem',
@@ -36,20 +36,20 @@ export default function ConfirmModal({
           m={0}
           p={0}
         >
-          <Stack sx={{ gap: 0 }}>
-            <Text fz="1.75rem" weight={700}>
+          <Stack style={{ gap: 0 }}>
+            <Text fz="1.75rem" fw={700}>
               {title ?? '-'}
             </Text>
-            <Text fz="1.125rem" weight={500}>
+            <Text fz="1.125rem" fw={500}>
               {subtitle ?? '-'}
             </Text>
           </Stack>
         </Grid.Col>
       </Grid>
-      <Group position="apart">
+      <Group justify="space-between">
         <Button
           variant="light"
-          color="violet.4"
+          c="violet.4"
           w="12.5rem"
           onClick={onClose}
         >
@@ -57,7 +57,7 @@ export default function ConfirmModal({
         </Button>
         <Button
           variant="filled"
-          color="violet.4"
+          c="violet.4"
           w="12.5rem"
           onClick={onConfirm}
         >

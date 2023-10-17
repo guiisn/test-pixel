@@ -7,7 +7,7 @@ export type HeaderInputProps = Omit<TextInputProps, 'icon' | 'styles'>
 export default function HeaderInput(props: HeaderInputProps): JSX.Element {
   return (
     <TextInput
-      icon={<Search width="1.5rem" height="1.5rem" data-testid="search-icon" />}
+      leftSection={<Search width="1.5rem" height="1.5rem" data-testid="search-icon" />}
       styles={(theme) => ({
         input: {
           border: `2px solid ${theme.colors.violet[4]}`,

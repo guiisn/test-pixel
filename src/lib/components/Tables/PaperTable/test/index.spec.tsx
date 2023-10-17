@@ -15,7 +15,7 @@ const tableTitle = 'People';
 
 describe('PaperTable', () => {
   test('Should render the table with title, headers, and body', () => {
-    render(<PaperTable header={headers} body={data} tableTitle={tableTitle} tableTitleColor="red" />);
+    render(<PaperTable header={headers} body={data} tableTitle={tableTitle} tableTitlec="red" />);
 
     // title
     expect(screen.getByText('People')).toBeInTheDocument();
@@ -32,7 +32,7 @@ describe('PaperTable', () => {
   });
 
   test('Should render the table with headers and body', () => {
-    render(<PaperTable header={headers} body={data} tableTitleColor="red" />);
+    render(<PaperTable header={headers} body={data} tableTitlec="red" />);
 
     // header
     expect(screen.getByText('Name')).toBeInTheDocument();

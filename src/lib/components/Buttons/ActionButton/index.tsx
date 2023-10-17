@@ -63,7 +63,8 @@ export default function ActionButton({
   return (
     <UnstyledButton
       {...rest}
-      sx={(theme) => ({
+      style={(theme) => ({
+        backgroundColor: 'white',
         border: '2px solid transparent',
         transition: 'all .4s',
         padding: styles[variant].padding,
@@ -74,7 +75,7 @@ export default function ActionButton({
         },
       })}
     >
-      <Group sx={(theme) => ({
+      <Group style={(theme) => ({
         svg: {
           color: theme.colors.violet[4],
           ...styles[variant].svg,
@@ -83,7 +84,7 @@ export default function ActionButton({
       >
         {icon}
         <Title
-          sx={{
+          style={{
             ...styles[variant].title,
           }}
           order={styles[variant].order as any}

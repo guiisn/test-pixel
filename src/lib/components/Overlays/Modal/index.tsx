@@ -1,6 +1,6 @@
 import { Modal as MantineModal, ModalProps } from '@mantine/core';
 import React from 'react';
-import useStyles from './style';
+import classes from './Modal.module.css';
 import ConfirmModal from './variants/Confirm';
 import FeedbackModal from './variants/Feedback';
 import ProgressModal from './variants/Progress';
@@ -27,8 +27,6 @@ export default function Modal({
   percentage,
   children,
 }: CustomModalProps): JSX.Element {
-  const { classes } = useStyles();
-
   const renderModal = {
     CONFIRM: <ConfirmModal
       onClose={onClose}

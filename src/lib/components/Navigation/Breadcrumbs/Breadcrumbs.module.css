@@ -1,0 +1,24 @@
+.root {
+    display: flex;
+    align-items: flex-end;
+}
+
+.separator {
+    color: var(--mantine-color-violet-4);
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 0;
+}
+
+.breadcrumb {
+    color: var(--mantine-color-violet-4);
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 0;
+}
+
+.breadcrumb:last-child {
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 0;
+}

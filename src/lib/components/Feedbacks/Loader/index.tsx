@@ -1,8 +1,11 @@
-import { Loader as MantineLoader, LoaderProps as MantineLoaderProps, MantineTheme } from '@mantine/core';
+import {
+  Loader as MantineLoader, LoaderProps as MantineLoaderProps,
+  MantineLoader as MantineLoaderType,
+} from '@mantine/core';
 import CircleProgress from './components/CirlceProgress';
 
 export interface LoaderProps extends Omit<MantineLoaderProps, 'variant'> {
-    variant: MantineTheme['loader'] | 'percentage'
+    variant: MantineLoaderType | 'percentage'
     value?: number
 }
 

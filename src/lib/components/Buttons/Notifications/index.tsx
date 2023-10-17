@@ -2,7 +2,7 @@ import {
   Anchor, Badge, Box, Grid, Group, Stack, Text,
 } from '@mantine/core';
 import { Bell } from 'tabler-icons-react';
-import useStyles from './styles';
+import classes from './Notifications.module.css';
 
 export interface NotificationButtonProps {
     id: string
@@ -21,7 +21,6 @@ export default function NotificationButton({
   reason,
   title,
 }: NotificationButtonProps): JSX.Element {
-  const { classes } = useStyles();
   const uri = `/notifications/${id}/details`;
 
   return (
@@ -36,7 +35,7 @@ export default function NotificationButton({
         <Grid m={0} className={classes.content}>
           <Grid.Col
             span={3}
-            sx={{
+            style={{
               display: 'flex', justifyContent: 'center', alignItems: 'center',
             }}
           >
@@ -46,41 +45,41 @@ export default function NotificationButton({
               bg="laraPurple.0"
               className={classes.icon}
               align="center"
-              position="center"
+              justify="center"
             >
               <Bell />
             </Group>
           </Grid.Col>
 
           <Grid.Col span={9}>
-            <Stack sx={{ gap: 0 }}>
-              <Group position="apart">
+            <Stack style={{ gap: 0 }}>
+              <Group justify="space-between">
                 <Text
                   role="heading"
                   fz="1.15rem"
-                  weight={800}
-                  color="gray.6"
+                  fw={800}
+                  c="gray.6"
                   w="70%"
                   className={classes.title}
                 >
                   {title}
                 </Text>
-                <Group sx={{ gap: '.5rem' }}>
+                <Group style={{ gap: '.5rem' }}>
                   {!isVisualized ? (
                     <Box
                       w="10px"
                       h="10px"
                       bg="red.4"
-                      sx={{ borderRadius: '50%' }}
+                      style={{ borderRadius: '50%' }}
                     />
                   ) : null}
-                  <Text data-testid="expiration-date" fz=".75rem" weight={700} color="gray.6">
+                  <Text data-testid="expiration-date" fz=".75rem" fw={700} c="gray.6">
                     {`${prize} Dias.`}
                   </Text>
                 </Group>
               </Group>
 
-              <Text role="contentinfo" fz=".875rem" weight={400} color="gray.4">
+              <Text role="contentinfo" fz=".875rem" fw={400} c="gray.4">
                 {message}
               </Text>
 

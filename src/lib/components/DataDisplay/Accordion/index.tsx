@@ -1,5 +1,5 @@
 import { Box, Accordion as MantineAccordion } from '@mantine/core';
-import useStyles from './style';
+import classes from './Accordion.module.css';
 
 interface IAccordions {
     value: string
@@ -12,8 +12,6 @@ export interface AccordionProps {
 }
 
 export default function Accordion({ accordions }: AccordionProps): JSX.Element {
-  const { classes } = useStyles();
-
   return (
     <Box className={classes.container}>
       <MantineAccordion classNames={{

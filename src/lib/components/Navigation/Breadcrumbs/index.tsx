@@ -1,5 +1,5 @@
 import { Anchor, Breadcrumbs as MantineBreadcrumbs } from '@mantine/core';
-import useStyles from './style';
+import classes from './Breadcrumbs.module.css';
 
 export interface BreadcrumbsProps {
     items: {
@@ -9,7 +9,6 @@ export interface BreadcrumbsProps {
 }
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps): JSX.Element {
-  const { classes } = useStyles();
   return (
     <MantineBreadcrumbs
       classNames={{

@@ -3,14 +3,13 @@ import {
   Stack, Title, useMantineTheme,
 } from '@mantine/core';
 import { BellX, MoodSad } from 'tabler-icons-react';
-import useStyles from './style';
+import classes from './NoResults.module.css';
 
 export interface NoResultsProps {
   variant?: 'default' | 'notifications'
 }
 
 export default function NoResults({ variant = 'default' }: NoResultsProps): JSX.Element {
-  const { classes } = useStyles();
   const { colors } = useMantineTheme();
 
   return (
@@ -19,7 +18,7 @@ export default function NoResults({ variant = 'default' }: NoResultsProps): JSX.
         <Box className={classes.component} data-testid="noResultsContainer">
           <Stack align="center">
             <MoodSad className={classes.icon} />
-            <Title order={2} weight={800}>
+            <Title order={2} fw={800} c="violet.4">
               Nenhum resultado encontrado!
             </Title>
           </Stack>
@@ -33,7 +32,7 @@ export default function NoResults({ variant = 'default' }: NoResultsProps): JSX.
             width="7rem"
             height="7rem"
           />
-          <Title order={3} weight={700} color="gray.4">
+          <Title order={3} fw={700} c="gray.4">
             Não há notificações.
           </Title>
         </Stack>

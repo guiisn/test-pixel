@@ -1,8 +1,7 @@
 import {
   Flex, Stack, Text, useMantineTheme,
 } from '@mantine/core';
-
-import useStyles from './styles';
+import classes from './InfoBox.module.css';
 
 export interface InfoBoxProps {
     icon:JSX.Element;
@@ -15,7 +14,6 @@ export default function InfoBox({
   icon, label, total, value,
 }: InfoBoxProps): JSX.Element {
   const theme = useMantineTheme();
-  const { classes } = useStyles();
 
   return (
     <Stack
@@ -24,12 +22,12 @@ export default function InfoBox({
     >
       <Flex gap="0.5rem" align="end">
         {icon}
-        <Text role="heading" color={theme.colors.gray[4]} weight="bold" sx={{ fontFamily: 'inherit' }}>
+        <Text role="heading" c={theme.colors.gray[4]} fw="bold" style={{ fontFamily: 'inherit' }}>
           {`${label}:`}
         </Text>
       </Flex>
 
-      <Flex justify="end" align="center" sx={{ color: theme.colors.gray[4] }}>
+      <Flex justify="end" align="center" style={{ color: theme.colors.gray[4] }}>
         <Text
           data-testid="value"
           className={classes.highlight}

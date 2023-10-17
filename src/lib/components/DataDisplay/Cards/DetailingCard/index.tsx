@@ -25,7 +25,7 @@ export default function DetailingCard({
     <Grid
       data-testid="detailing-card"
       w="100%"
-      sx={(theme) => ({
+      style={(theme) => ({
         padding: '.5rem 1.5rem',
         borderRadius: '20px',
         border: !selected ? '2px solid transparent' : `2px solid ${theme.colors.violet[4]}`,
@@ -40,7 +40,7 @@ export default function DetailingCard({
     >
       <Grid.Col span={5}>
         <Group align="center" h="100%">
-          <Title order={1} weight={800}>
+          <Title c="violet.4" order={1} fw={800}>
             {installments}
             {' '}
             Parcelas
@@ -48,27 +48,27 @@ export default function DetailingCard({
         </Group>
       </Grid.Col>
       <Grid.Col span={5}>
-        <Stack sx={{ gap: '.5rem' }}>
-          <Title order={3} weight={800}>
+        <Stack style={{ gap: '.5rem' }}>
+          <Title c="violet.4" order={3} fw={800}>
             {installments}
             x de
             {' '}
             {installmentAmount}
           </Title>
-          <Stack sx={{ gap: '.1rem' }}>
-            <Title order={5} color="gray.4" weight={700}>
+          <Stack style={{ gap: '.1rem' }}>
+            <Title order={5} c="gray.4" fw={700}>
               <b>Valor total: </b>
               {totalAmount}
             </Title>
-            <Title order={5} color="gray.4" weight={700}>
+            <Title order={5} c="gray.4" fw={700}>
               <b>Juros ao mês: </b>
               {interestRate}
             </Title>
-            <Title order={5} color="gray.4" weight={700}>
+            <Title order={5} c="gray.4" fw={700}>
               <b>CET (Custo Efetivo Total): </b>
               {cet}
             </Title>
-            <Title order={5} color="gray.4" weight={700}>
+            <Title order={5} c="gray.4" fw={700}>
               <b>Primeiro pagamento: </b>
               {firstPayment}
             </Title>
@@ -76,8 +76,8 @@ export default function DetailingCard({
         </Stack>
       </Grid.Col>
       <Grid.Col span={2}>
-        <Group position="right">
-          <Radio size="lg" color="violet.4" checked={Boolean(selected)} />
+        <Group justify="flex-end">
+          <Radio size="lg" c="violet.4" checked={Boolean(selected)} />
         </Group>
       </Grid.Col>
     </Grid>

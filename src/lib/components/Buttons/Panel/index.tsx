@@ -15,7 +15,7 @@ export default function PanelButton({
   return (
     <UnstyledButton
       onClick={onClick}
-      sx={{
+      style={{
         padding: '1.9375rem 1.2rem',
         boxShadow: !selected ? '0px 7px 21px 0px rgba(8, 73, 132, 0.18)' : '0px 7px 21px 0px rgba(112, 13, 255, 0.28)',
         borderRadius: '40px',

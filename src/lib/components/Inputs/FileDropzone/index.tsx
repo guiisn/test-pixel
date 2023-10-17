@@ -37,17 +37,17 @@ export default function FileDropzone({
       })}
       {...rest}
     >
-      <Group sx={{ gap: '1.68rem' }}>
+      <Group style={{ gap: '1.68rem' }}>
         <Dropzone.Accept>
           <Stack align="center" w="100%">
-            <Group position="center" align="center" sx={{ padding: '0.625rem', borderRadius: '50%', backgroundColor: mantineTheme.colors.violet[1] }}>
+            <Group justify="center" align="center" style={{ padding: '0.625rem', borderRadius: '50%', backgroundColor: mantineTheme.colors.violet[1] }}>
               <File
                 width="3.6rem"
                 height="3.6rem"
                 color={mantineTheme.colors.violet[6]}
               />
             </Group>
-            <Title order={5} weight={600}>
+            <Title order={5} fw={600}>
               {fileName}
             </Title>
           </Stack>
@@ -67,16 +67,16 @@ export default function FileDropzone({
             height="3.56rem"
             color={mantineTheme.colors.violet[4]}
           />
-          <Stack sx={{ gap: '2.9375rem' }}>
-            <Stack sx={{ gap: '0.375rem' }}>
-              <Title order={3} weight={800}>
+          <Stack style={{ gap: '2.9375rem' }}>
+            <Stack style={{ gap: '0.375rem' }}>
+              <Title order={3} fw={800}>
                 {title}
               </Title>
-              <Title order={5} weight={500}>
+              <Title order={5} fw={500}>
                 {subtitle}
               </Title>
             </Stack>
-            <Title order={6} weight={500}>
+            <Title order={6} fw={500}>
               {sizeText}
             </Title>
           </Stack>

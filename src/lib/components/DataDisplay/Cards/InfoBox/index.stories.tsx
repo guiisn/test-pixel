@@ -22,6 +22,6 @@ export const Component: StoryObj<typeof InfoBox> = {
   args: {
     label: 'Total proposals',
     value: 40,
-    icon: <PigMoney color={laraGray[4]} />,
+    icon: <PigMoney c={laraGray[4]} />,
   },
 };
